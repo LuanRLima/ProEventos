@@ -68,7 +68,7 @@ namespace ProEventos.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "EventosEventos",
+                name: "PalestanteEvento",
                 columns: table => new
                 {
                     PalestranteId = table.Column<int>(type: "INTEGER", nullable: false),
@@ -76,15 +76,15 @@ namespace ProEventos.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_EventosEventos", x => new { x.EventoId, x.PalestranteId });
+                    table.PrimaryKey("PK_EPalestanteEvento", x => new { x.EventoId, x.PalestranteId });
                     table.ForeignKey(
-                        name: "FK_EventosEventos_Eventos_EventoId",
+                        name: "FK_EPalestanteEvento_Eventos_EventoId",
                         column: x => x.EventoId,
                         principalTable: "Eventos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_EventosEventos_Palestrantes_PalestranteId",
+                        name: "FK_EPalestanteEvento_Palestrantes_PalestranteId",
                         column: x => x.PalestranteId,
                         principalTable: "Palestrantes",
                         principalColumn: "Id",
@@ -121,8 +121,8 @@ namespace ProEventos.Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_EventosEventos_PalestranteId",
-                table: "EventosEventos",
+                name: "IX_PalestanteEvento_PalestranteId",
+                table: "PalestanteEvento",
                 column: "PalestranteId");
 
             migrationBuilder.CreateIndex(
@@ -144,7 +144,7 @@ namespace ProEventos.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "EventosEventos");
+                name: "PalestanteEvento");
 
             migrationBuilder.DropTable(
                 name: "Lotes");
