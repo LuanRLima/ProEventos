@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Front/ProEventos-App/src/app/components/eventos/evento-lista/evento-lista.component.ts
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Component, OnInit, TemplateRef } from '@angular/core';
@@ -13,6 +14,22 @@ import { EventoService } from '@app/services/evento.service';
 })
 export class EventoListaComponent implements OnInit {
 
+=======
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { EventoService } from '../../services/evento.service';
+import { Evento } from '../../models/Evento';
+
+@Component({
+  selector: 'app-eventos',
+  templateUrl: './eventos.component.html',
+  styleUrls: ['./eventos.component.scss'],
+  // providers: [EventoService]
+})
+export class EventosComponent implements OnInit {
+>>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8:Front/ProEventos-App/src/app/components/eventos/eventos.component.ts
   modalRef: BsModalRef;
   public eventos: Evento[] = [];
   public eventosFiltrados: Evento[] = [];
@@ -43,8 +60,12 @@ export class EventoListaComponent implements OnInit {
     private eventoService: EventoService,
     private modalService: BsModalService,
     private toastr: ToastrService,
+<<<<<<< HEAD:Front/ProEventos-App/src/app/components/eventos/evento-lista/evento-lista.component.ts
     private spinner: NgxSpinnerService,
     private router: Router
+=======
+    private spinner: NgxSpinnerService
+>>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8:Front/ProEventos-App/src/app/components/eventos/eventos.component.ts
   ) { }
 
   public ngOnInit(): void {
@@ -83,8 +104,11 @@ export class EventoListaComponent implements OnInit {
     this.modalRef.hide();
   }
 
+<<<<<<< HEAD:Front/ProEventos-App/src/app/components/eventos/evento-lista/evento-lista.component.ts
   detalheEvento(id: number): void{
     this.router.navigate([`eventos/detalhe/${id}`]);
   }
 
+=======
+>>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8:Front/ProEventos-App/src/app/components/eventos/eventos.component.ts
 }

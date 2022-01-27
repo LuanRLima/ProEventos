@@ -15,6 +15,7 @@
     "lib": [
       "es2018",
       "dom"
+<<<<<<< HEAD
     ],
     "paths": {
       "@app/*": ["src/app/*"],
@@ -24,5 +25,8 @@
   "angularCompilerOptions": {
     "scriptTemplates": true,
     "scriptInjectionParamanters": true
+=======
+    ]
+>>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8
   }
 }
