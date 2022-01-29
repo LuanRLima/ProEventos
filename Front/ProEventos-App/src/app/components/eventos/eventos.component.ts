@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:Front/ProEventos-App/src/app/components/eventos/evento-lista/evento-lista.component.ts
-import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ToastrService } from 'ngx-toastr';
-import { Evento } from '@app/models/Evento';
-import { EventoService } from '@app/services/evento.service';
-
-@Component({
-  selector: 'app-evento-lista',
-  templateUrl: './evento-lista.component.html',
-  styleUrls: ['./evento-lista.component.scss']
-})
-export class EventoListaComponent implements OnInit {
-
-=======
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ToastrService } from 'ngx-toastr';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { EventoService } from '../../services/evento.service';
-import { Evento } from '../../models/Evento';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-eventos',
@@ -32,94 +7,9 @@ import { Evento } from '../../models/Evento';
   // providers: [EventoService]
 })
 export class EventosComponent implements OnInit {
-<<<<<<< HEAD
-  
+
   ngOnInit(): void {
 
   }
 
-=======
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8:Front/ProEventos-App/src/app/components/eventos/eventos.component.ts
-  modalRef: BsModalRef;
-  public eventos: Evento[] = [];
-  public eventosFiltrados: Evento[] = [];
-
-  public larguraImagem = 150;
-  public margemImagem = 2;
-  public exibirImagem = true;
-  private filtroListado = '';
-
-  public get filtroLista(): string {
-    return this.filtroListado;
-  }
-
-  public set filtroLista(value: string) {
-    this.filtroListado = value;
-    this.eventosFiltrados = this.filtroLista ? this.filtrarEventos(this.filtroLista) : this.eventos;
-  }
-
-  public filtrarEventos(filtrarPor: string): Evento[] {
-    filtrarPor = filtrarPor.toLocaleLowerCase();
-    return this.eventos.filter(
-      evento => evento.tema.toLocaleLowerCase().indexOf(filtrarPor) !== -1 ||
-      evento.local.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-    );
-  }
-
-  constructor(
-    private eventoService: EventoService,
-    private modalService: BsModalService,
-    private toastr: ToastrService,
-<<<<<<< HEAD:Front/ProEventos-App/src/app/components/eventos/evento-lista/evento-lista.component.ts
-    private spinner: NgxSpinnerService,
-    private router: Router
-=======
-    private spinner: NgxSpinnerService
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8:Front/ProEventos-App/src/app/components/eventos/eventos.component.ts
-  ) { }
-
-  public ngOnInit(): void {
-    this.spinner.show();
-    this.getEventos();
-  }
-
-  public alterarImagem(): void {
-    this.exibirImagem = !this.exibirImagem;
-  }
-
-  public getEventos(): void {
-    this.eventoService.getEventos().subscribe({
-      next: (eventos: Evento[]) => {
-        this.eventos = eventos;
-        this.eventosFiltrados = this.eventos;
-      },
-      error: (error: any) => {
-        this.spinner.hide();
-        this.toastr.error('Erro ao Carregar os Eventos', 'Erro!');
-      },
-      complete: () => this.spinner.hide()
-    });
-  }
-
-  openModal(template: TemplateRef<any>): void {
-    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
-  }
-
-  confirm(): void {
-    this.modalRef.hide();
-    this.toastr.success('O Evento foi deletado com Sucesso.', 'Deletado!');
-  }
-
-  decline(): void {
-    this.modalRef.hide();
-  }
-
-<<<<<<< HEAD:Front/ProEventos-App/src/app/components/eventos/evento-lista/evento-lista.component.ts
-  detalheEvento(id: number): void{
-    this.router.navigate([`eventos/detalhe/${id}`]);
-  }
-
-=======
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8:Front/ProEventos-App/src/app/components/eventos/eventos.component.ts
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8
 }

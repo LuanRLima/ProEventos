@@ -15,18 +15,18 @@
     "lib": [
       "es2018",
       "dom"
-<<<<<<< HEAD
     ],
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@environments/*": ["src/environments/*"]
-    }
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ]
+    },
   },
   "angularCompilerOptions": {
-    "scriptTemplates": true,
-    "scriptInjectionParamanters": true
-=======
-    ]
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   }
 }

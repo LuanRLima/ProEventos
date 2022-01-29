@@ -10,7 +10,7 @@ export class NavComponent implements OnInit {
   isCollapsed = true;
   constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   showMenu(): boolean {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -39,23 +38,6 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'palestrantes', component: PalestrantesComponent },
   { path: 'contatos', component: ContatosComponent },
-=======
-import { NgModule, Component } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { EventosComponent } from './components/eventos/eventos.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
-import { PerfilComponent } from './components/perfil/perfil.component';
-import { ContatosComponent } from './components/contatos/contatos.component';
-
-const routes: Routes = [
-  { path: 'eventos', component: EventosComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'palestrantes', component: PalestrantesComponent },
-  { path: 'contatos', component: ContatosComponent },
-  { path: 'perfil', component: PerfilComponent },
->>>>>>> 96e8a567f6402a6962b9d728b6352ce1b1e6cfd8
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: '**', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
